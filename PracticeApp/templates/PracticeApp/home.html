@@ -1,0 +1,10 @@
+{% extends 'PracticeApp/base.html' %}
+
+{% block content %}
+<p>Acá estoy, kpx</p>
+Ella dijo: {{key1}}<br>
+Y yo dije: {{key2}}<br><br>
+{% for elemento in key3 %}
+    {{elemento}}<br>
+{% endfor %}
+{% endblock %}

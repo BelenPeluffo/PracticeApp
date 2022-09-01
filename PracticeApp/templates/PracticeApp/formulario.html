@@ -1,0 +1,20 @@
+{% extends 'PracticeApp/base.html' %}
+
+{% block content %}
+
+{% if signos.errors %}
+    <p>Algo salió para el culo</p>
+{% endif %}
+
+<form action="" method="POST"> {% csrf_token %}
+    <!--OLD SCHOOL SHIET:
+    <p>Nombre: <input type="text" name="nombre"></p>
+    <p>Signo: <input type="text" name="signo"></p>
+    -->
+    <!--django shiet-->
+    <table>
+        {{ signos.as_table }}
+    </table>
+    <input type="submit" value="Enviar">
+</form>
+{% endblock %}
